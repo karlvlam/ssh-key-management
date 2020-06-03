@@ -1,0 +1,10 @@
+[package]
+name = "gen-key-file"
+version = "0.1.0"
+authors = ["Karl Lam <karl.v.lam@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.32.0"
+serde_json = "1.0.39"
+crypto-hash = "0.3.3"
