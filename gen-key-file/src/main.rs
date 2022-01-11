@@ -1,6 +1,6 @@
 use std::fs;
 use std::path::Path;
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
 extern crate clap;
 extern crate serde_json;
@@ -34,7 +34,7 @@ fn main() {
     let key_file = m.value_of("key_file").unwrap();
 
 
-    let mut keys = HashMap::new();
+    let mut keys = BTreeMap::new();
 
     for path in fs::read_dir(&key_dir).unwrap() {
         let key = String::from(path.unwrap().file_name().to_string_lossy());
